@@ -1,0 +1,10 @@
+input_txt = open('exp.txt','r')
+output_txt=open('copy_exp.txt','w') 
+line=input_txt.readline()
+print(line)
+while line !='':
+    print(line)
+    output_txt.write(line)
+    line=input_txt.readline()
+input_txt.close()
+output_txt.close()

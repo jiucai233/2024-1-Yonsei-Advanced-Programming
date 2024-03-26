@@ -1,0 +1,11 @@
+print('This is a plus calculator made by SHEN YINGJUN')
+operand1=int(input('number1:\n'))
+operand2=int(input('number2:\n'))
+print(f'{operand1}+{operand2}={operand1+operand2}')
+
+print('This is a abnormal calculator made by SHEN YINGJUN')
+operand1=input('number1:\n')
+print(operand1)
+print(type(operand1))
+operand2=input('number2:\n')
+print(f'{operand1}+{operand2}={operand1+operand2}')
