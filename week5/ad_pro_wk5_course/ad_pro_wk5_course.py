@@ -1,5 +1,6 @@
 import sys
-
+from argparse import ArgumentParser
+import pdb
 def breakdown(amount: float):
     bills = [] 
     if amount != int(amount):  
@@ -43,7 +44,7 @@ def breakdown(amount: float):
     add = quarter_num * 25
 
     dimes_num = (coin_par - add) // 10
-    coins.append(fifty_num)
+    coins.append(dimes_num)
     add += dimes_num * 10
 
     nickels_num = (coin_par - add) // 5
@@ -56,8 +57,12 @@ def breakdown(amount: float):
     return coins,bills
     
 if __name__ == '__main__':
-#    num = float(input('---this is a program to calculate your bills---\nwhat number do u wanna convert?'))
-    num=float(sys.argv[1])
+    #num = float(input('---this is a program to calculate your bills---\nwhat number do u wanna convert?'))
+    # num=float(sys.argv[1])
+    parser=ArgumentParser()
+    parser.add_argument('--amount',type=float,default=123.21,help='just input that number')
+    args=parser.parse_args()
+    num=args.amount
     if num > 999.99:
         print('unable to calculate, type number less than 1000!')
     else:
